@@ -1,0 +1,26 @@
+[project]
+name = "script-module-httpcore"
+version = "0.1.0"
+description = "A minimal HTTP client. ⚙️"
+authors = [
+    { name = "Florence Wolfe", email = "florencewolfe@pm.me" }
+]
+dependencies = [
+    "httpcore[asyncio]>=1.0.5",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/script_module_httpcore"]
